@@ -1,0 +1,150 @@
+        /* 01ABRIL2022*/
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+        body {
+            font-size: 24px;
+            font-family: 'Teko', Helvetica, sans-serif;
+            color: #000;
+
+            /***    Paleta ServerBKD ***/
+            --palettex : #7137c8;
+            --palettex2 : #00ff00;
+            --bckx : #000;
+            --wthx : #fff;
+            /* AMERICAN PALETTE */
+            --SHY-MOMENT : #a29bfe;
+            --EXODUS-FRUIT : #6c5ce7;
+            --LIGHT-GREENISH-BLUE : #55efc4;
+            --MINT-LEAF : #00b894;
+            --AMERICAN-RIVER : #636e72;
+            --DRACULA-ORCHID : #2d3436;
+            /* CHINESSE PALETTE */
+            --GOLDEN-SAND : #eccc68;
+            --ORANGE : #ffa502;
+            --LIME-SOAP : #7bed9f;
+            --UFO-GREEN : #2ed573;
+            --CORAL : #ff7f50;
+            --BRUSCHETTA-TOMATO : #ff6348;
+            --WILD-WATERMELON : #ff6b81;
+            --FRENCH-SKY-BLUE : #70a1ff;
+            --CLEAR-CHILL : #1e90ff;
+            --SATURATED-SKY : #5352ed;
+            --BRIGHT-GREEK : #3742fa;
+            --PEACE : #a4b0be;
+            --BAY-WHARF : #747d8c;
+            --ANTI-FLASH-WHITE : #f1f2f6;
+            --GRISAILLE : #57606f;
+            --PRESTIGE-BLUE : #2f3542;
+            --CITY-LIGHTS : #dfe4ea;
+
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-image: url('../img/back5s4s5d4sdz54x13xd5d.jpg');
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: var(--EXODUS-FRUIT);
+
+            height: 100vh;
+   }
+        /*******************************************************************/
+
+        nav{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: none ; /*var(--BRIGHT-GREEK)*/
+            height: 4rem;
+        }
+
+        nav a{
+            color: var(--wthx);
+            font-size: 3rem;
+        }
+
+        nav a:hover{
+            color: var(--ORANGE);
+            text-decoration: none;
+            letter-spacing: 1.03px;
+        }
+
+        .nombre p{
+            color: var(--BRIGHT-GREEK);
+            background-color: var(--CITY-LIGHTS);
+            font-size: 3rem;
+        }
+
+        .dexcarg{
+            margin: 5rem 2rem 0 2rem;
+        }
+
+        .bdx{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        section .input-group-text{
+            background-color: var(--BRIGHT-GREEK);
+            color: #fff;
+        }
+
+        .btn{
+            background: none;
+            width: 75%;
+            font-size: 2rem;
+            color: var(--wthx);
+        }
+
+        .btn:hover{
+            background-color: var(--BRIGHT-GREEK);
+            letter-spacing: 1.3px;
+            color: var(--wthx);
+        }
+
+        .form-control:focus{
+            color: var(--BRIGHT-GREEK);
+            font-size: 1.12rem;
+        }
+
+        @media (max-width : 1440px) {
+            nav a,
+            .nombre p{
+                font-size: 2rem;
+            }
+            .dexcarg{
+                margin: 0rem 2rem;
+            }
+            .btn{
+                width: 100%;
+                font-size: 1.75rem;
+            }
+        }
+/******************************/
+
+.ri-camera-fill{
+    color: var(--bckx);
+    font-size: 3rem;
+    background: #00b894;
+    border-radius: 50%;
+    padding: 1.52rem;
+    margin: 0 auto;
+}
+
+.ri-camera-fill p{
+    margin: 0 auto;
+}
+
+.card-header,
+.card-footer{
+    background: none !important;
+    font-size: 3rem;
+    text-align: center;
+}
+   

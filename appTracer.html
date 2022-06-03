@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TraceVisitasX</title>
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+
+    <link rel="stylesheet" href="./css/" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+        
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        section div div {
+            background: #048fd9;
+            padding-top: 0.7rem;
+        }
+        
+        section input {
+            margin: 0.2rem 0.22rem;
+        }
+        
+        section div img {
+            width: 55%;
+            height: 55%;
+            margin-top: 0.6rem;
+            border: 0.3rem solid rgb(66, 182, 202);
+            justify-content: center;
+            align-items: center;
+        }
+        
+        section div .btnx {
+            /** background: rgb(247, 51, 2);**/
+            align-items: center;
+            padding: 1rem 2.5rem;
+        }
+        
+        section div .btn {
+            display: inline-block;
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: white;
+        }
+        
+        section div .btn:hover {
+            background: rgb(208, 230, 11);
+            border: 0.1rem solid rgb(208, 230, 11);
+            color: rgb(134, 161, 107);
+            font-size: 1.5rem;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Forms 6 -->
+    <section class="appx">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-8 col-md-4 col-lg-4 col-xl-4">
+                    <form id="xtracerx">
+                        <div class="row">
+                            <div class="col text-center">
+                                <h3>Registro de Visitas BKD</h3>
+                                <p>BunkerDIGITAL</p>
+                            </div>
+                        </div>
+                        <!-- Datos Generales -->
+                        <div class="row align-items-center">
+                            <div class="col mt-4">
+                                <input type="text" class="form-control" id="name" placeholder="Nombre del Cliente" title="Por favor introduce Nombre y Apellido" autofocus required>
+                            </div>
+                        </div>
+                        <div class="row align-items-center mt-2">
+                            <div class="col">
+                                <input type="text" class="form-control" id="zona" placeholder="Zona" title="Por favor introduce una dirección de correo válido" required>
+                            </div>
+                        </div>
+                        <!-- Fecha / Hora -->
+                        <div class="row align-items-center mt-2">
+                            <div class="col">
+                                <p>Tiempo a facturar</p>
+                                <input type="datetime-local" name="IniT" id="init" class="form-control" placeholder="Inicio" title="Fecha de Inicio de la Visita" size="4">
+                            </div>
+                            <div class="col">
+                                <input type="datetime-local" name="FiniT" id="finit" class="form-control" placeholder="Inicio" title="Fecha de Inicio de la Visita" size="4">
+                                <div class="col my-2 text-center">
+                                    <button class="btn btn-info" type="submit">Ahora</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Areas de atencion -->
+                        <div class="row justify-content-center mt-2" id="system">
+                            <p>
+                                <span class="uppercase mb-2 pb-3">AREAS ATENDIDAS:</span> <br>
+                                <label class="pr-3 mr-4"><input type="checkbox" name="alarmas" >ALARMAS</label><br>
+                                <label><input type="checkbox" name="cctv" >CCTV</label><br>
+                                <label><input type="checkbox" name="cercado">Cercado Eléctrico</label><br>
+                                <label><input type="checkbox" name="redes">Redes | Informáticas</label><br>
+                                <label><input type="checkbox" name="garantia">Garantía</label><br>
+                                <label><input type="checkbox" name="3ero">OutSourcing</label>
+                            </p>
+                        </div>
+                        <!-- Submit -->
+                        <div class="row btnx mt-1 text-center">
+                            <div class="col">
+                                <button class="btn btn-info" type="submit">Submit</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div id="imprimirx"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-analytics.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        /*** 25/01/2021 */
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyAK-WiGdtUxiyNxh9jOVe_xW_RydbSug9Y",
+            authDomain: "xtracer-a2410.firebaseapp.com",
+            projectId: "xtracer-a2410",
+            storageBucket: "xtracer-a2410.appspot.com",
+            messagingSenderId: "122511089825",
+            appId: "1:122511089825:web:fb905926400308323e10e0",
+            measurementId: "G-5CW465FZ87"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        var db = firebase.firestore();
+
+        const aver = document.getElementById('xtracerx')
+
+        aver.addEventListener('submit', valores);
+
+        function valores(e) {
+            let name = document.getElementById('name').value; /** Nombre */
+            let zona = document.getElementById('zona').value; /*** Zona*/
+            let init = document.getElementById('init').value; /*** Fecha de inicio */
+            let finit = document.getElementById('finit').value; /*** Fecha final */
+            // let btnahora = document.getElementById('btnahora').value; /*** Fecha final */
+
+            if (finit == "") {
+                var fecha = new Date();
+                finit = fecha.toLocaleString()
+            } else {
+                console.log("mierda")
+            }
+
+            if (init == "") {
+                init = "Facturar 2 Horas minimo"
+            } else {
+                console.log("mierda")
+            }
+
+            // let system = document.getElementById('system').value; /** Sistema intervenido     */
+            let sign = "app.Tracerxjs"
+
+            var formx = document.forms["xtracerx"]
+            const alarmas = formx["alarmas"].checked //&& 
+            const cctv = formx["cctv"].checked
+            const cercados = formx["cercado"].checked
+            const redes = formx["redes"].checked
+            let garantias = formx["garantia"].checked
+            let outs = formx["3ero"].checked //&& cctv && cercados && redes && garantias && outs
+            e.preventDefault();
+
+            //Revisar cambiar por Radius bottom _ 26ENE2021
+            let facturar = {}
+
+            if (garantias == true) {
+                facturar = {
+                    nofacturar: "Es servicio tecnico de garantía"
+                }
+                outs = false
+            }
+            if (outs == true) {
+                facturar = {
+                    nofacturar: "Servicio B2B Tercerizado"
+                }
+                garantias = false
+            } else {
+                facturar = {
+                    nofacturar: "Facturar 2 Horas minimo"
+                }
+                garantias = false
+                outs = false
+            }
+
+            const system = {
+                facturar,
+                alarmas,
+                cctv,
+                cercados,
+                redes,
+                garantias,
+                outs,
+            }
+
+            e.preventDefault();
+
+            db.collection("xtracer").add({
+                    name,
+                    zona,
+                    init,
+                    finit,
+                    system,
+                    sign,
+                })
+                .then(function(docRef) {
+                    console.log("Dato igresado: ", docRef.name);
+                })
+                .catch(function(error) {
+                    console.error("Error : ", error);
+                });
+        };
+    </script>
+</body>
+
+</html>
