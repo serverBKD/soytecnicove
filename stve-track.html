@@ -4,63 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TraceVisitasX</title>
-    <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <title>Tracker Visitas</title>
 
-    <link rel="stylesheet" href="./css/" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet">
 
     <style>
         * {
             margin: 0%;
             padding: 0%;
+            box-sizing: border-box;
+            font-size: 24px;
+        }
+        
+         :root {
+            --paletta0: #1d2b3a;
+            --paletta1: #8000ff;
+            --paletta2: #0000ff;
+            --paletta5: #fff;
+            --paletta6: #000;
         }
         
         body {
+            width: 100%;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            background-color: var(--paletta0);
+            color: var(--paletta5);
+            font-family: 'Oxanium', Helvetica, sans-serif;
+            letter-spacing: .3rem;
+            gap: .5rem;
         }
         
-        section div div {
-            background: #048fd9;
-            padding-top: 0.7rem;
-        }
-        
-        section input {
-            margin: 0.2rem 0.22rem;
-        }
-        
-        section div img {
-            width: 55%;
-            height: 55%;
-            margin-top: 0.6rem;
-            border: 0.3rem solid rgb(66, 182, 202);
-            justify-content: center;
-            align-items: center;
-        }
-        
-        section div .btnx {
-            /** background: rgb(247, 51, 2);**/
-            align-items: center;
-            padding: 1rem 2.5rem;
-        }
-        
-        section div .btn {
-            display: inline-block;
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: white;
-        }
-        
-        section div .btn:hover {
-            background: rgb(208, 230, 11);
-            border: 0.1rem solid rgb(208, 230, 11);
-            color: rgb(134, 161, 107);
-            font-size: 1.5rem;
+        .appx {
+            width: 50%;
+            height: 100%;
+            background: var(--paletta1);
+            padding: 1rem 2rem;
+            border-radius: .2rem;
+            box-shadow: .6rem .7rem 1rem .4rem var(--paletta2);
         }
     </style>
 
@@ -70,62 +52,57 @@
     <!-- Forms 6 -->
     <section class="appx">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-8 col-md-4 col-lg-4 col-xl-4">
+            <div class="row ">
+                <div class="col-md-4">
                     <form id="xtracerx">
-                        <div class="row">
-                            <div class="col text-center">
-                                <h3>Registro de Visitas BKD</h3>
-                                <p>BunkerDIGITAL</p>
-                            </div>
+                        <div class="col text-center">
+                            <h3>Registro de Visitas BKD</h3>
+                            <p>BunkerDIGITAL</p>
                         </div>
-                        <!-- Datos Generales -->
-                        <div class="row align-items-center">
-                            <div class="col mt-4">
-                                <input type="text" class="form-control" id="name" placeholder="Nombre del Cliente" title="Por favor introduce Nombre y Apellido" autofocus required>
-                            </div>
+                        <div class="col mt-4">
+                            <input type="text" class="form-control" id="name" placeholder="Nombre del Cliente" autofocus required>
                         </div>
-                        <div class="row align-items-center mt-2">
-                            <div class="col">
-                                <input type="text" class="form-control" id="zona" placeholder="Zona" title="Por favor introduce una dirección de correo válido" required>
-                            </div>
-                        </div>
-                        <!-- Fecha / Hora -->
-                        <div class="row align-items-center mt-2">
-                            <div class="col">
-                                <p>Tiempo a facturar</p>
-                                <input type="datetime-local" name="IniT" id="init" class="form-control" placeholder="Inicio" title="Fecha de Inicio de la Visita" size="4">
-                            </div>
-                            <div class="col">
-                                <input type="datetime-local" name="FiniT" id="finit" class="form-control" placeholder="Inicio" title="Fecha de Inicio de la Visita" size="4">
-                                <div class="col my-2 text-center">
-                                    <button class="btn btn-info" type="submit">Ahora</button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Areas de atencion -->
-                        <div class="row justify-content-center mt-2" id="system">
-                            <p>
-                                <span class="uppercase mb-2 pb-3">AREAS ATENDIDAS:</span> <br>
-                                <label class="pr-3 mr-4"><input type="checkbox" name="alarmas" >ALARMAS</label><br>
-                                <label><input type="checkbox" name="cctv" >CCTV</label><br>
-                                <label><input type="checkbox" name="cercado">Cercado Eléctrico</label><br>
-                                <label><input type="checkbox" name="redes">Redes | Informáticas</label><br>
-                                <label><input type="checkbox" name="garantia">Garantía</label><br>
-                                <label><input type="checkbox" name="3ero">OutSourcing</label>
-                            </p>
-                        </div>
-                        <!-- Submit -->
-                        <div class="row btnx mt-1 text-center">
-                            <div class="col">
-                                <button class="btn btn-info" type="submit">Submit</button>
-                            </div>
-                        </div>
-
-                    </form>
                 </div>
-                <div id="imprimirx"></div>
+                <div class="col">
+                    <input type="text" class="form-control" id="zona" placeholder="Zona" required>
+                </div>
             </div>
+            <!-- Fecha / Hora -->
+            <div class="row align-items-center mt-2">
+                <div class="col">
+                    <p>Tiempo a facturar</p>
+                    <input type="datetime-local" name="IniT" id="init" class="form-control" placeholder="Inicio" size="4">
+                </div>
+                <div class="col">
+                    <input type="datetime-local" name="FiniT" id="finit" class="form-control" placeholder="Inicio" size="4">
+                    <div class="col my-2 text-center">
+                        <button class="btn btn-info" type="submit">Ahora</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Areas de atencion -->
+            <div class="row justify-content-center mt-2" id="system">
+                <p>
+                    <span class="uppercase mb-2 pb-3">AREAS ATENDIDAS:</span> <br>
+                    <label class="pr-3 mr-4"><input type="checkbox" name="alarmas" >ALARMAS</label><br>
+                    <label><input type="checkbox" name="cctv" >CCTV</label><br>
+                    <label><input type="checkbox" name="cercado">Cercado Eléctrico</label><br>
+                    <label><input type="checkbox" name="redes">Redes | Informáticas</label><br>
+                    <label><input type="checkbox" name="garantia">Garantía</label><br>
+                    <label><input type="checkbox" name="3ero">OutSourcing</label>
+                </p>
+            </div>
+            <!-- Submit -->
+            <div class="row btnx mt-1 text-center">
+                <div class="col">
+                    <button class="btn btn-info" type="submit">Submit</button>
+                </div>
+            </div>
+
+            </form>
+        </div>
+        <div id="imprimirx"></div>
+        </div>
         </div>
     </section>
 

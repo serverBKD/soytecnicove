@@ -15,32 +15,32 @@
 
 <body>
     <main>
-
-        <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
-            <a class="navbar-brand mr-1" style="font-size: 1.4rem;" href="#">serverBKD</a>
-            <button class="btn btn-primary btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
+        <header>
+            <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+                <a class="navbar-brand mr-1" style="font-size: 1.4rem;" href="#">serverBKD</a>
+                <button class="btn btn-primary btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
 			<!-- <i class="fa fa-bars"></i> -->	
 			</button>
-            <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0"></form>
-            <!-- Navbar -->
-            <ul class="navbar-nav ml-auto ml-md-0">
-                <li class="nav-item dropdown no-arrow">
-                    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fa fa-user-circle fa-fw"></i>
-                        <span style="font-size: 1.2rem;">Administrador</span>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                        <a class="dropdown-item" href="#">Perfil</a>
-                        <!-- <i class="fas fa-fw fa-user"></i> -->
-                        <a class="dropdown-item" href="#">Cambiar contraseña</a>
-                        <!-- <i class="fas fa-fw fa-key"></i> -->
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Cerrar sesión</a>
-                        <!-- <i class="fas fa-fw fa-sign-out-alt"></i> -->
-                    </div>
-                </li>
-            </ul>
-        </nav>
+                <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0"></form>
+                <!-- Navbar -->
+                <ul class="navbar-nav ml-auto ml-md-0">
+                    <li class="nav-item dropdown no-arrow">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-user-circle fa-fw"></i>
+                            <span style="font-size: 1.2rem;">Administrador</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                            <a class="dropdown-item" href="#">Perfil</a>
+                            <!-- <i class="fas fa-fw fa-user"></i> -->
+                            <a class="dropdown-item" href="#">Cambiar contraseña</a>
+                            <!-- <i class="fas fa-fw fa-key"></i> -->
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Cerrar sesión</a>
+                            <!-- <i class="fas fa-fw fa-sign-out-alt"></i> -->
+                        </div>
+                    </li>
+                </ul>
+            </nav>
         </header>
         <!-- ======= Contact Us Section ======= -->
         <section class="contacto">
@@ -50,44 +50,39 @@
                         <form action="" method="post" role="form" id="submit">
                             <div class="form-row">
                                 <div class="col-lg-4 form-group">
-                                    <input type="text" name="nombre" class="form-control" id="nombre"
-                                    placeholder="Nombre"/>
+                                    <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Nombre" required/>
                                 </div>
                                 <div class="col-lg-4 form-group">
-                                    <input type="text" class="form-control" name="rif" id="rif" placeholder="RIF" />
+                                    <input type="text" class="form-control" name="rif" id="rif" placeholder="RIF" required/>
                                 </div>
                                 <div class="col-lg-4 form-group">
-                                    <input type="email" class="form-control" name="email" id="email"
-                                        placeholder="Email" />
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Email" required/>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="col-lg-4 form-group">
-                                    <input type="text" name="ciudad" class="form-control" id="ciudad"
-                                        placeholder="Ciudad" />
+                                    <input type="text" name="ciudad" class="form-control" id="ciudad" placeholder="Ciudad" required/>
                                 </div>
                                 <div class="col-lg-4 form-group">
-                                    <input type="tel" class="form-control" name="tel" id="tel" placeholder="tel" />
+                                    <input type="tel" class="form-control" name="tel" id="tel" placeholder="tel" required />
                                 </div>
                                 <div class="col-lg-4 form-group">
-                                    <input type="number" class="form-control" name="exp" id="exp" placeholder="exp"
-                                        min="0" step="1"/>
+                                    <input type="number" class="form-control" name="exp" id="exp" placeholder="exp" min="0" step="1" required />
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="col-lg-6 form-group">
-                                    <input type="text" name="areaTecn" class="form-control" id="areaTecn"
-                                        placeholder="areaTecn" />
+                                    <input type="text" name="areaTecn" class="form-control" id="areaTecn" placeholder="areaTecn" required/>
                                 </div>
                                 <div class="col-lg-6 form-group">
-                                    <input type="text" class="form-control" name="persContacto" id="persContacto" placeholder="persContacto" />
+                                    <input type="text" class="form-control" name="persContacto" id="persContacto" placeholder="persContacto" required/>
                                 </div>
                             </div>
                             <div class="row justify-content-center mt-4 display-block">
                                 <div class="col-lg-4 mb-2">
                                     <div class="form-check">
                                         <label class="form-check-label text-light">
-                                            <input type="checkbox" class="form-check-input" id="term">
+                                            <input type="checkbox" class="form-check-input" id="term" required>
                                             Acepto los <a href="#" class="text-light">Terminos y Conditiones</a>
                                         </label>
                                     </div>

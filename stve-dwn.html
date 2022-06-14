@@ -11,8 +11,9 @@
     <meta name="description" content="Descarga de Manuales de Alarmas">
     <!-- STYLES -->
     <link rel="stylesheet" href="./src/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./src/css/appDWN.css">
+    <link rel="stylesheet" href="./src/css/appdwn.css">
     <link rel="stylesheet" href="./src/css/remixicon/remixicon.css">
+  
 
 </head>
 
@@ -20,50 +21,53 @@
     <header>
         <nav class="fixed-bottom">
             <div class="row">
-                <div class="col-xl-12 logo">
+                <div class="col-md-12 logo">
                     <a href="index.html"><i class="ri-instagram-line"></i>/tecnicodeseguridad</a>
                 </div>
             </div>
         </nav>
     </header>
-    <section class="dexcarg">
+    <section class="appdwn">
         <div class="container">
-            <div class="row bdx">
-                <div class="col-md-12 nombre">
-                    <p>Manuales de Seguridad Electrónica</p>
+            <div class="row">
+                <div class="col-sm-12 nombre">
+                    <h3>Manuales de Seguridad Electrónica</h3>
                 </div>
-                <div class=" col-md-12">
-                    <form action="" method="POST" id="submitx">
+                <div class=" col-sm-12">
+                    <form action="" method="POST" id="submit">
                         <div class="form-group">
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ri-survey-fill"></i></span>
                                 </div>
                                 <input type="text" name="nombre" id="nombre" class="form-control"
-                                    placeholder="Nombre Completo">
+                                    placeholder="Nombre Completo" required>
                             </div>
                             <div class="input-group mt-2">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ri-mail-send-fill"></i></span>
                                 </div>
                                 <input type="email" name="email" id="email" class="form-control"
-                                    placeholder="Email contacto">
+                                    placeholder="Email contacto" required>
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">@</span>
                                 </div>
                             </div>
                         </div>
+                        <div class="col-sm-12 btnx">
+                            <a class="btn" type="submit"><i class="ri-battery-2-charge-fill"></i>DESCARGA<i
+                                    class="ri-battery-2-charge-fill"></i></a>
+                        </div>
                     </form>
                 </div>
-                <div class="col-md-12 btnx">
-                    <a class="btn" type="submit"><i class="ri-battery-2-charge-fill"></i>DESCARGA<i
-                            class="ri-battery-2-charge-fill"></i></a>
-                </div>
+
             </div>
         </div>
     </section>
 </body>
+
 <script src="./src/js/jquery.min.js"></script>
 <script src="./src/js/bootstrap.bundle.min.js"></script>
+<script src="./src/js/appDWN.js"></script>
 
 </html>
