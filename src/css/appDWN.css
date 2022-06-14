@@ -2,88 +2,68 @@
         * {
             margin: 0%;
             padding: 0%;
+            box-sizing: border-box;
         }
         body {
             font-size: 24px;
             font-family: 'Teko', Helvetica, sans-serif;
-            color: #000;
-
             /***    Paleta ServerBKD ***/
-            --palettex : #7137c8;
-            --palettex2 : #00ff00;
+            --palettex : #7137c899;
             --bckx : #000;
-            --wthx : #fff;
-            /* AMERICAN PALETTE */
-            --SHY-MOMENT : #a29bfe;
-            --EXODUS-FRUIT : #6c5ce7;
-            --LIGHT-GREENISH-BLUE : #55efc4;
-            --MINT-LEAF : #00b894;
-            --AMERICAN-RIVER : #636e72;
-            --DRACULA-ORCHID : #2d3436;
-            /* CHINESSE PALETTE */
-            --GOLDEN-SAND : #eccc68;
-            --ORANGE : #ffa502;
-            --LIME-SOAP : #7bed9f;
-            --UFO-GREEN : #2ed573;
-            --CORAL : #ff7f50;
-            --BRUSCHETTA-TOMATO : #ff6348;
-            --WILD-WATERMELON : #ff6b81;
-            --FRENCH-SKY-BLUE : #70a1ff;
-            --CLEAR-CHILL : #1e90ff;
+            --wthx : #fffff1f9;
             --SATURATED-SKY : #5352ed;
             --BRIGHT-GREEK : #3742fa;
-            --PEACE : #a4b0be;
-            --BAY-WHARF : #747d8c;
-            --ANTI-FLASH-WHITE : #f1f2f6;
-            --GRISAILLE : #57606f;
-            --PRESTIGE-BLUE : #2f3542;
-            --CITY-LIGHTS : #dfe4ea;
-
-
             display: flex;
             justify-content: center;
             align-items: center;
-
             background-image: url('../img/back5s4s5d4sdz54x13xd5d.jpg');
             background-position: top center;
             background-repeat: no-repeat;
             background-size: cover;
-            background-color: var(--EXODUS-FRUIT);
-
+            background-color: var(--SATURATED-SKY);
             height: 100vh;
    }
         /*******************************************************************/
 
         nav{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: none ; /*var(--BRIGHT-GREEK)*/
-            height: 4rem;
-        }
-
-        nav a{
-            color: var(--wthx);
+            position: fixed;
+            width: 100%;
+            height: 5rem;
+            background: var(--wthx);
             font-size: 3rem;
-        }
-
-        nav a:hover{
-            color: var(--ORANGE);
-            text-decoration: none;
             letter-spacing: 1.03px;
+            padding: .2rem 5rem 1rem 5rem;
         }
 
-        .nombre p{
-            color: var(--BRIGHT-GREEK);
-            background-color: var(--CITY-LIGHTS);
-            font-size: 3rem;
+        nav:hover{
+            background-color: var(--palettex);
+        }
+        nav a{
+            color:  var(--palettex);
+        }
+        nav a:hover{
+            color: var(--wthx);
+            text-decoration: none;
         }
 
-        .dexcarg{
+
+
+        .appdwn{
+            background-color: var(--palettex);
+            color: var(--wthx);
+            width: 40%;
+            padding: 2rem 3rem;
+            border-radius: .3rem;
             margin: 5rem 2rem 0 2rem;
         }
 
-        .bdx{
+        .nombre h3{
+            color: var(--wthx);
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+        }
+
+        .row{
             display: flex;
             justify-content: center;
             align-items: center;
@@ -91,7 +71,7 @@
         }
 
         section .input-group-text{
-            background-color: var(--BRIGHT-GREEK);
+            background-color: var(--SATURATED-SKY);
             color: #fff;
         }
 
@@ -115,10 +95,10 @@
 
         @media (max-width : 1440px) {
             nav a,
-            .nombre p{
+            .nombre h1{
                 font-size: 2rem;
             }
-            .dexcarg{
+            .appdwn{
                 margin: 0rem 2rem;
             }
             .btn{
