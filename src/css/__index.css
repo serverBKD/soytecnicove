@@ -1,0 +1,260 @@
+/*27/04/22*/
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    box-sizing: border-box; /* width -padding - border      .....       content-box por defecto width + padding + border*/
+    --palettex : #4267B2;
+    --bgx : #f7f8fa;
+    --cardx : #aeafae;
+    --wsx: #42BE50;
+}
+
+body{
+    background-color: var(--bgx);
+    font-family: 'Teko', Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+nav{
+    background-color: transparent;
+    display: fixed;
+    color: var(--palettex);
+    font-size: 3rem;
+}
+
+nav a:hover{
+    text-decoration: none;
+}
+
+nav .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    padding: 0;
+}
+
+nav .items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .3rem;
+}
+
+nav li{
+    display: inline-flex;
+    padding: .5rem 2rem;
+}
+
+nav li a:hover{
+color: yellowgreen;
+font-size: xx-large;
+}
+/********************************************************************/
+.welcome{
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.cardx{
+    padding: .2rem .5rem;
+    margin: .1rem 1.3rem;
+}
+
+.card{
+    background-color: var(--cardx);
+    padding: 1rem 1.3rem;
+}
+.welcome .xri{
+    text-align: center;
+    margin: .25rem auto;
+    margin-bottom: 1rem;
+}
+.welcome .xri .entry{
+    font-size: 3rem;
+    color: #fff;
+    border: .2rem solid #fff;
+    border-radius: 50%;
+    padding: .7rem;
+    background-color: var(--palettex);
+}
+
+.welcome ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome .cardx li.bgx{
+    background-color: var(--cardx);
+    border: none;
+}
+
+.welcome .cardx li{
+    display: inline-flex;
+    padding: 0 12px;
+    width: 100%;
+    margin: 2px;
+    align-items: center;
+}
+
+.welcome .cardx li p{
+    font-size: 1.52rem;
+    color: var(--palettex);
+    padding: 12px 0 0 0 ;
+   
+}
+
+.welcome .cardx li i{
+    font-size: xx-large;
+    color: var(--palettex);
+    padding: 0 12px;
+}
+
+
+/****************************************************/
+
+.welcome .rrss {
+    text-align: center;
+}
+
+.welcome .rrss a{
+    color: #fff;
+    font-size: xx-large;
+    margin: .4rem 5%;
+    text-decoration: none;
+}
+
+.welcome .rrss a:hover{
+    color: var(--palettex);
+    text-decoration: none;
+}
+
+.welcome .btn{
+    width: 100%;
+    background-color: var(--palettex);
+    color: #fff;
+    font-size: 1.5rem;
+}
+/***************************************************/
+
+.videox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+
+/***************************************************/
+
+.puntero{
+    width: 90px;
+    height: 90px;
+    background-color: var(--wsx);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 2px;
+    right: 30px;
+    border-radius: 50%;
+    border: .25rem solid var(--wsx);
+    z-index: 999999999999999; /* ? */
+}
+
+.puntero i{
+    font-size: 4rem;
+    color: #fff;
+    display: fixed;
+}
+
+.puntero a:hover{
+    color: #fff;
+    text-decoration: none;
+}
+
+/***************************************************/
+
+.contacto{
+    background-color: var(--palettex);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacto .container{
+    margin: 5rem 0;
+}
+
+.contacto input,
+.form-check-label,
+.form-check-input{
+    font-size: x-large;
+}
+
+.contacto .btn{
+    width: 50%;
+    background-color: var(--wsx);
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+/***************************************************/
+
+@keyframes animate-loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    right: 15px;
+    bottom: 15px;
+    background: #c5c32e;
+    color: #fff;
+    transition: display 0.5s ease-in-out;
+    z-index: 99999;
+}
+
+.back-to-top i {
+    font-size: 24px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+
+.back-to-top:hover {
+    color: #fff;
+    background: #629fd3;
+    transition: background 0.2s ease-in-out;
+}
+
