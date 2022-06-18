@@ -6,21 +6,20 @@
     width: 100%;
     background-color: var(--paletta5);
     color: var(--palettaFF);
-
 }
 
 :root {
-    --primaryFont: 'Kdam Thmor Pro',system-ui,sans-serif;
-    --secondaryFont: Helvetica,system-ui,sans-serif;
+    --primaryFont: 'Kdam Thmor Pro', system-ui, sans-serif;
+    --secondaryFont: Helvetica, system-ui, sans-serif;
     --paletta0: #111038;
     --paletta1: #0e5864;
     --paletta2: #0a8d9a;
     --paletta3: #06d4db;
     --paletta4: #0ffff8;
-    --paletta5:#04001E;
+    --paletta5: #04001E;
     --paletta00: #000;
     --palettaFF: #FFF;
-    /******************************/
+    /**TODO*****************************/
     --color1: #0089e4;
     --color2: #2597f4;
     --color3: #e90c8e;
@@ -28,7 +27,7 @@
     --color7: #dd57d3;
     --color5: #97f425;
     --color6: #ff6935;
-    /******************************/
+    /**!****************************/
     --BGX: #f7f8fa;
     --ALIBABA: #ff5313;
     --CHINACARGOVE: #048fd9;
@@ -169,7 +168,6 @@
     --gradient-top-left: linear-gradient(225deg, #00120bff, #35605aff, #6b818cff, #d8e4ffff, #31e981ff);
     --gradient-bottom-left: linear-gradient(315deg, #00120bff, #35605aff, #6b818cff, #d8e4ffff, #31e981ff);
     --gradient-radial: radial-gradient(#00120bff, #35605aff, #6b818cff, #d8e4ffff, #31e981ff);
-
     /************ LeonidasEsteban **********/
     --regular: normal 16px/24px var(--primaryFont);
     --regularBold: bold 16px/24px var(--primaryFont);
@@ -202,7 +200,7 @@
     --secondaryDisabled: #E6BEDE;
     --secondaryHover: #FA057C;
     --secondaryActive: #AA0351;
-    --secondaryGradient: linear-gradient(218.99deg,#3F69FF -19.82%,#EF0070 100.25%);
+    --secondaryGradient: linear-gradient(218.99deg, #3F69FF -19.82%, #EF0070 100.25%);
     --background: #ffffff;
     --backgroundOpaque: hsl(0 0% 100% / 0.83);
     --secondaryContrast: #706c61;
@@ -211,7 +209,7 @@
     --darkLight: #d1015;
     --gray: #AEB7C1;
     --lightGray: #f9f8ff;
-    --landingPrimary: linear-gradient(to right,rgba(103,219,249,0.9) 30.72%,rgba(49,56,209,0.9) 100.8%);
+    --landingPrimary: linear-gradient(to right, rgba(103, 219, 249, 0.9) 30.72%, rgba(49, 56, 209, 0.9) 100.8%);
     --error: #AC0016;
     --success: #11d40e;
     --lightText: #212429;
@@ -219,11 +217,10 @@
     --black50: #8B8D8D;
     --white: white;
     --white80: #4B4D50;
-
 }
 
 html {
-    font-family: var(--primaryFont), Helvetica,sans-serif;
+    font-family: var(--primaryFont), Helvetica, sans-serif;
     font-size: 18px;
 }
 
@@ -232,6 +229,8 @@ html {
         width: 100%;
     }
 }
+
+
 /* 
 body {
     overflow-x: hidden;
