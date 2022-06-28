@@ -14,6 +14,9 @@
 
 ``Tecnologias / Stack``
 
+``Svelte/Firebase Auth``
+```28/06/2022```
+
 - Nodejs
 - HTML
 - CSS
