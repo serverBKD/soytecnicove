@@ -1,0 +1,382 @@
+@import url("paletta.css");
+
+/************ NavBar **********/
+
+nav {
+    background: var(--paletta0);
+    height: 56px;
+    width: 100%;
+    position: fixed;
+    z-index: 5;
+}
+
+.nav__container {
+    background: var(--paletta0);
+
+    height: 100%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.nav__input,
+.nav__label {
+    display: none;
+}
+
+.nav__item {
+    text-decoration: none;
+    --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+
+.nav__item::after {
+    background: var(--paletta4);
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    clip-path: var(--clippy);
+    transition: clip-path 0.3s;
+}
+
+.nav__item:hover {
+    --clippy: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+}
+
+.nav__menu {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 2rem;
+}
+
+@media (max-width: 640px) {
+    .nav__label {
+        display: block;
+        cursor: pointer;
+        color: azure;
+    }
+    .nav__menu {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        clip-path: circle(0 at center);
+        transition: clip-path 1s ease-in-out;
+    }
+}
+
+.nav__input:checked+.nav__menu {
+    clip-path: circle(100%);
+}
+
+
+/**********Hero Section***10/06/2022*********/
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 4rem;
+    background-image: url("../img/vstvihttug4gv414.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--paletta1);
+}
+
+.hero::before {
+    content: "";
+    background: linear-gradient(var(--magenta), var(--paletta2));
+    position: absolute;
+    top: 56px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.35;
+}
+
+.hero .container{
+    max-width: 60%;
+    text-align: end;
+    border-radius: .4rem;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    border: .15rem solid #10FEFE;
+    box-shadow: 0 0 10rem #10FEFE;
+}
+
+.hero .text .hostingweb{
+    background: var(--paletta4);
+    border-radius: .4rem;
+    padding: .2rem .3rem;
+}
+
+.hero .btn {
+    background: var(--paletta4);
+    text-decoration: none;
+    padding: .2rem .3rem;
+    margin-top: .5rem;
+}
+
+.hero-wrap .btn:hover {
+    background: none;
+    border-radius: .4rem;
+    border: .3rem solid var(--paletta2);
+    color: var(--paletta2);
+}
+
+
+@media (max-width:640px) {
+    .hero .container{
+    max-width: 100%;
+    margin: 0;
+    }
+} 
+
+
+/*/***************queryDomain************************/
+
+.qdomain {
+    size: 1.3rem;
+    color: var(--paletta3);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 .8rem 1.92rem var(--magenta);
+}
+
+.qdomain form {
+    margin-bottom: 1rem;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1rem;
+}
+
+.qdomain form .form-group {
+    width: 100%;
+}
+
+.qdomain form 
+.form-group>input,
+.form-group>select {
+    width: 100%;
+    height: 2rem;
+    font-family: var(--font0);
+    font-size: 1.3rem;
+    border-radius: .3rem;
+    border: 2px solid var(--magenta);
+}
+
+.qdomain form .form-group>input:focus {
+    color: var(--paletta2);
+    font-size: 1.3rem;
+    font-weight: 600;
+    border: none;
+}
+
+.qdomain .btn,
+select {
+    text-transform: uppercase;
+    font-weight: 800;
+    border: none;
+    border-radius: .4rem;
+}
+
+.domain-price span {
+    margin: 0 1rem;
+}
+
+
+/************ Galeria de Servicios **********/
+
+.servicios {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: .2rem;
+    width: 100%;
+    min-height: 20rem;
+    padding: .01rem 0;
+    position: relative;
+    transition: content 12s ease-in-out;
+}
+
+.servicios .servicios-items a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    grid-area: 0 0 span 4 span 3;
+}
+
+
+/************TODO **********/
+
+
+/* .servicios .servicios-items a:hover::before {
+    content: "123";
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+} */
+
+
+/************ ChooseUS **********/
+
+.choose {
+     color: var(--paletta0);
+    width: 100%;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.choose .container {
+    width: 80%;
+    text-align: center;
+}
+
+.choose .container .row {
+    width: 100%;
+    background-color: var(--paletta2);
+    padding: 1rem .4rem;
+    border-radius: .4rem;
+}
+
+.choose .container .choose-row {
+    margin: 2rem 0 0 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(3 1fr);
+    gap: 3rem;
+    text-align: justify;
+}
+
+.choose .container .choose-row .choose-items {
+    text-align: center;
+    padding: 1rem .4rem;
+}
+
+.choose .container .choose-row .choose-items:hover {
+    background: var(--paletta2);
+    border-radius: .4rem;
+}
+
+.choose i {
+    background-color: var(--color0);
+    color: aliceblue;
+    font-size: 3rem;
+}
+
+.choose-ico {
+    margin-bottom: .4rem;
+}
+
+
+/**TODO cdn REMIICO?*/
+
+
+/**TODO 11/06/2022 */
+
+.counter {
+    background-color: var(--ytta1);
+    color: aqua;
+}
+
+.main-serv {
+    background-color: var(--paletta0);
+}
+
+
+/*************our-Prices***11/06/2022*********/
+
+.our-prices {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.our-prices .container {
+    width: 100%;
+    height: 100vh;
+}
+
+.our-prices .container .prices-title {
+    margin-bottom: 2rem;
+}
+
+.our-prices .container .prices-grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(4 1fr);
+    gap: 1rem;
+}
+
+
+/**********************/
+
+.testimony {
+    background-color: var(--paletta4);
+}
+
+.blog {
+    background-color: var(--palettaFF);
+}
+
+
+/*************Footer 11/06/2022*********/
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .container {
+    width: 85%;
+}
+
+footer ul li {
+    list-style: none;
+}
+
+footer a {
+    color: azure;
+    text-decoration: none;
+}
+
+footer .footer-row {
+    margin-top: 2rem;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(4 1fr);
+    gap: 1rem;
+}
+
+footer .sign-CMBA {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer .sign-CMBA a {
+    color: var(--magenta);
+}
+
+
+/*** serverBKD.xyz *Version : 0.1.0*11/06/2022*/

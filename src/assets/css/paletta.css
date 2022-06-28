@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: var(--paletta5);
+    color: var(--palettaFF);
+}
+
+:root {
+    --primaryFont: 'Kdam Thmor Pro', system-ui, sans-serif;
+    --secondaryFont: Helvetica, system-ui, sans-serif;
+    --paletta0: #111038;
+    --paletta1: #0e5864;
+    --paletta2: #0a8d9a;
+    --paletta3: #06d4db;
+    --paletta4: #0ffff8;
+    --paletta5: #04001E;
+    --paletta00: #000;
+    --palettaFF: #FFF;
+    /**TODO*****************************/
+    --color1: #0089e4;
+    --color2: #2597f4;
+    --color3: #e90c8e;
+    --color4: #ff3ca5;
+    --color7: #dd57d3;
+    --color5: #97f425;
+    --color6: #ff6935;
+    /**!****************************/
+    --BGX: #f7f8fa;
+    --ALIBABA: #ff5313;
+    --CHINACARGOVE: #048fd9;
+    /**       Azules      */
+    --cyan: #00ffff;
+    --darkcyan: #008b8b;
+    --TURKISH_AQUA: #006266;
+    --aqua: #00ffff;
+    --TEAL: #39cccc;
+    --blue: #0000ff;
+    --blue-sapphire: #015272ff;
+    --maximum-blue: #3ab5d9ff;
+    --cg-blue: #007da4ff;
+    --sky-blue: #6cc3dfff;
+    --AQUA: #7fdbff;
+    --MERCHANT_MARINE_BLUE: #0652dd;
+    --BLUE-MARTINA: #12cbc4;
+    --TURQUOISE-CANVA: #01c3cc;
+    --BLUE-CANVA: #2a89da;
+    --PIGMENT-BLUE: #2d2d94;
+    --prussian-blue: #00344dff;
+    --TWOHOUNSANDUNDERTHESEA: #1b1464;
+    --darkblue: #00008b;
+    --NAVY: #001f3f;
+    --navi: #000080;
+    --indigo: #4b0082;
+    --CYBER-GRAPE: #553c7b;
+    --PURPLE-CANVA: #7d2ae7;
+    /**       Amarillos   */
+    --yellow: #ffff00;
+    --YELLOW: #ffdc00;
+    --gold: #ffd700;
+    --darkkhaki: #bdb76b;
+    --darksalmon: #e9967a;
+    --SUNFLOWER: #ffc312;
+    /**       Rojos       */
+    --maroon: #800000;
+    --MARRON: #85144b;
+    --darkred: #8b0000;
+    --darkmagenta: #8b008b;
+    --darkviolet: #9400d3;
+    --FORGOTTEN-PURPLE: #9980fa;
+    --darkorchid: #9932cc;
+    --brown: #a52a2a;
+    --magenta: #ff00ff;
+    --pink: #ffc0cb;
+    --REDx: #ff4136;
+    --RED: #ff0000;
+    --LAVENDER-ROSE: #fda7df;
+    --PURPLE: #b10dc9;
+    --FUCHSIA: #f012be;
+    /**     Verdes        */
+    --green: #008000;
+    --lime: #00ff00;
+    --darkgreen: #006400;
+    --GREEN: #2ecc40;
+    --darkolivegreen: #556b2f;
+    --olive: #808000;
+    --lightgreen: #90ee90;
+    --ANDROID_GREEN: #a3cb38;
+    /**       Naranjas    */
+    --ORANGE: #ff851b;
+    --darkorange: #ff8c00;
+    --orange: #ffa500;
+    /**       Blancos     */
+    --khaki: #f0e68c;
+    --lightblue: #add8e6;
+    --lightcyan: #e0ffff;
+    --lightgrey: #d3d3d3;
+    --lightpink: #ffb6c1;
+    --lightyellow: #ffffe0;
+    --GRAY: #aaaaaa;
+    --darkgrey: #a9a9a9;
+    --SILVER: #dddddd;
+    --WHITE: #ffffff;
+    --azure: #f0ffff;
+    --beige: #f5f5dc;
+    --silver: #c0c0c0;
+    /**       Negros      */
+    --BLACK: #111111;
+    /*** 15/05/2022 ***/
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #0085A1;
+    --cyan: #17a2b8;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #1abc9c;
+    --secondary: #2c3e50;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --dark-jungle-green: #00120bff;
+    --dark-slate-gray: #35605aff;
+    --slate-gray: #6b818cff;
+    --periwinkle-crayola: #d8e4ffff;
+    --medium-spring-green: #31e981ff;
+    /* CSS HSL */
+    --dark-jungle-green: hsla(157, 100%, 4%, 1);
+    --dark-slate-gray: hsla(172, 29%, 29%, 1);
+    --slate-gray: hsla(200, 13%, 48%, 1);
+    --periwinkle-crayola: hsla(222, 100%, 92%, 1);
+    --medium-spring-green: hsla(146, 81%, 55%, 1);
+    /* SCSS HEX */
+    --dark-jungle-green: #00120bff;
+    --dark-slate-gray: #35605aff;
+    --slate-gray: #6b818cff;
+    --periwinkle-crayola: #d8e4ffff;
+    --medium-spring-green: #31e981ff;
+    /* SCSS HSL */
+    --dark-jungle-green: hsla(157, 100%, 4%, 1);
+    --dark-slate-gray: hsla(172, 29%, 29%, 1);
+    --slate-gray: hsla(200, 13%, 48%, 1);
+    --periwinkle-crayola: hsla(222, 100%, 92%, 1);
+    --medium-spring-green: hsla(146, 81%, 55%, 1);
+    /* SCSS RGB */
+    --dark-jungle-green: rgba(0, 18, 11, 1);
+    --dark-slate-gray: rgba(53, 96, 90, 1);
+    --slate-gray: rgba(107, 129, 140, 1);
+    --periwinkle-crayola: rgba(216, 228, 255, 1);
+    --medium-spring-green: rgba(49, 233, 129, 1);
+    /* SCSS Gradient */
+    --gradient-top: linear-gradient(0deg, #00120bff, #35605aff, #6b818cff, #d8e4ffff, #31e981ff);
+    --gradient-right: linear-gradient(90deg, #00120bff, #35605aff, #6b818cff, #d8e4ffff, #31e981ff);
+    --gradient-bottom: linear-gradient(180deg, #00120bff, #35605aff, #6b818cff, #d8e4ffff, #31e981ff);
+    --gradient-left: linear-gradient(270deg, #00120bff, #35605aff, #6b818cff, #d8e4ffff, #31e981ff);
+    --gradient-top-right: linear-gradient(45deg, #00120bff, #35605aff, #6b818cff, #d8e4ffff, #31e981ff);
+    --gradient-bottom-right: linear-gradient(135deg, #00120bff, #35605aff, #6b818cff, #d8e4ffff, #31e981ff);
+    --gradient-top-left: linear-gradient(225deg, #00120bff, #35605aff, #6b818cff, #d8e4ffff, #31e981ff);
+    --gradient-bottom-left: linear-gradient(315deg, #00120bff, #35605aff, #6b818cff, #d8e4ffff, #31e981ff);
+    --gradient-radial: radial-gradient(#00120bff, #35605aff, #6b818cff, #d8e4ffff, #31e981ff);
+    /************ LeonidasEsteban **********/
+    --regular: normal 16px/24px var(--primaryFont);
+    --regularBold: bold 16px/24px var(--primaryFont);
+    --p2Regular: normal 14px/24px var(--primaryFont);
+    --p2Bold: bold 14px/24px var(--primaryFont);
+    --smallRegular: normal 12px/20px var(--primaryFont);
+    --smallBold: bold 12px/20px var(--primaryFont);
+    --headline1: bold 64px/80px var(--primaryFont);
+    --headline2: bold 56px/64px var(--primaryFont);
+    --headline3: bold 48px/56px var(--primaryFont);
+    --headline4: bold 32px/40px var(--primaryFont);
+    --headline5: bold 24px/32px var(--primaryFont);
+    --headline6: bold 20px/32px var(--primaryFont);
+    --buttonRegular: 600 16px/24px var(--primaryFont);
+    --headerBlockSize: 72px;
+    --secondary80: #6876FF;
+    --textField: #444;
+    --basePrimary: #ffffff;
+    --baseSecondary: #212429;
+    --baseTertiary: #f9f8ff;
+    --primary: #0803D2;
+    --primary90: #0704FE;
+    --primary80: #373DFE;
+    --primary70: #6876FF;
+    --primary60: #A9BDFF;
+    --primaryHover: #0902A6;
+    --primaryActive: #09017A;
+    --primaryDisabled: #A9BDFF;
+    --secondary: #EF0070;
+    --secondaryDisabled: #E6BEDE;
+    --secondaryHover: #FA057C;
+    --secondaryActive: #AA0351;
+    --secondaryGradient: linear-gradient(218.99deg, #3F69FF -19.82%, #EF0070 100.25%);
+    --background: #ffffff;
+    --backgroundOpaque: hsl(0 0% 100% / 0.83);
+    --secondaryContrast: #706c61;
+    --primaryLight: #1712e1;
+    --primaryDark: #be;
+    --darkLight: #d1015;
+    --gray: #AEB7C1;
+    --lightGray: #f9f8ff;
+    --landingPrimary: linear-gradient(to right, rgba(103, 219, 249, 0.9) 30.72%, rgba(49, 56, 209, 0.9) 100.8%);
+    --error: #AC0016;
+    --success: #11d40e;
+    --lightText: #212429;
+    --black: #212429;
+    --black50: #8B8D8D;
+    --white: white;
+    --white80: #4B4D50;
+}
+
+html {
+    font-family: var(--primaryFont), Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+@media screen {
+    html {
+        width: 100%;
+    }
+}
+
+
+/* 
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+} Deshabilita el scroll */
+
+
+/***************************************/
+
+
+/************ Paletta *************/
+
+
+/*************10/06/2022*********/

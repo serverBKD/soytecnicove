@@ -1,0 +1,136 @@
+/* 01ABRIL2022*/
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+:root {
+  /***    Paleta ServerBKD ***/
+  --palettex: #7137c899;
+  --BLACK: #000;
+  --WHITE: #fffff1f9;
+  --SATURATED-SKY: #5352ed;
+  --BRIGHT-GREEK: #3742fa;
+}
+body {
+  font-size: 18px;
+  font-family: "Teko", Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../src/assets/img/back5s4s5d4sdz54x13xd5d.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--SATURATED-SKY);
+  width: 100%;
+  height: 100vh;
+}
+/*******************************************************************/
+
+nav {
+  position: fixed;
+  height: 3rem;
+  background: var(--BRIGHT-GREEK);
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 1.03px;
+  padding: 0.42rem 5rem 1rem 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav:hover {
+  background-color: var(--palettex);
+}
+nav a {
+  width: 100%;
+  color: var(--WHITE);
+  font-size: 1.5rem;
+}
+nav a:hover {
+  color: var(--WHITE);
+  text-decoration: none;
+}
+
+.appdwn {
+  background-color: var(--palettex);
+  color: var(--WHITE);
+  width: 60%;
+  padding: 2rem 3rem;
+  border-radius: 0.3rem;
+  margin: 5rem 2rem 0 2rem;
+  box-shadow: 0 0 0.95rem 0.1rem rgba(60, 230, 230, 0.667);
+}
+
+.nombre h3 {
+  color: var(--WHITE);
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+}
+
+section .input-group-text {
+  background-color: var(--SATURATED-SKY);
+  color: #fff;
+}
+
+.btnx button {
+  background: none;
+  width: 100%;
+  font-size: 2rem;
+  color: var(--WHITE);
+}
+
+/* .btnx:hover {
+  background-color: var(--BRIGHT-GREEK);
+  letter-spacing: 1.3px;
+  color: var(--WHITE);
+  width: 100%;
+} */
+
+.btnx button:hover {
+  background-color: var(--BRIGHT-GREEK);
+  letter-spacing: 1.3px;
+  color: var(--WHITE);
+  width: 100%;
+}
+
+.form-control:focus {
+  color: var(--BRIGHT-GREEK);
+  font-size: 1.2rem;
+}
+@media (max-width: 640px) {
+  .appdwn {
+    width: 100%;
+    margin: 0rem auto;
+  }
+  .btnx button {
+    width: 100%;
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 310px) {
+  body {
+    background-image: none;
+  }
+  .appdwn {
+    display: none;
+  }
+  nav a {
+    display: block;
+    width: 80%;
+    height: 100vh;
+    font-size: 1.3rem;
+    font-style: italic;
+  }
+}
